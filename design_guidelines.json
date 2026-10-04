@@ -1,0 +1,145 @@
+{
+  "project_name": "FLOWX - Professional Order-Flow Analytics SaaS",
+  "identity_and_theme": {
+    "persona": "E1 Creative Designer - High-Performance Dark Trading Terminal Strategy",
+    "theme": "Deep Dark Terminal (Void #06080D / Panel #0D101A / Elevated #141824)",
+    "aesthetic_principles": [
+      "Tactical High-Density Visual Scanning",
+      "Zero Visual Slop - Sharp 1px Micro Borders (#1E2638)",
+      "Multi-Color Market Signal Hierarchy (Green = Buying/Bullish, Red = Selling/Bearish, Cyan = Neutral/Info, Amber = Important/Warning, Violet = Advanced Analytics)",
+      "Dense, Precision-Aligned Data Layouts for Desktop-First Execution with dedicated mobile panel switcher"
+    ]
+  },
+  "colors": {
+    "backgrounds": {
+      "app_bg": "#06080D",
+      "panel_bg": "#0D101A",
+      "surface_elevated": "#141824",
+      "header_bg": "#090C14",
+      "glass_overlay": "rgba(13, 16, 26, 0.85)"
+    },
+    "market_visuals": {
+      "bullish_green": "#00E676",
+      "bearish_red": "#FF2E54",
+      "neutral_info": "#00F0FF",
+      "warning_amber": "#FFB800",
+      "analytics_purple": "#9D4EDD",
+      "poc_gold": "#FFD700",
+      "vwap_cyan": "#00E5FF",
+      "stacked_imbalance": "#FF007A"
+    },
+    "brand_accent": {
+      "primary": "#00F0FF",
+      "primary_hover": "#33F3FF",
+      "primary_active": "#00B8CC",
+      "glow": "rgba(0, 240, 255, 0.25)",
+      "border_highlight": "#1E3A5F"
+    },
+    "neutrals": {
+      "text_primary": "#F0F4F8",
+      "text_secondary": "#94A3B8",
+      "text_muted": "#64748B",
+      "border": "#1E2638",
+      "border_subtle": "#121826"
+    }
+  },
+  "typography": {
+    "file_extension_note": "Target codebase uses .js / .jsx React standard. Do not write .tsx type annotations.",
+    "fonts": {
+      "heading_font": "Outfit, 'Cabinet Grotesk', sans-serif",
+      "body_font": "Inter, 'Plus Jakarta Sans', sans-serif",
+      "mono_data_font": "'JetBrains Mono', 'Fira Code', monospace"
+    },
+    "hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "h3_panel": "text-lg sm:text-xl font-semibold tracking-normal",
+      "terminal_metric": "font-mono text-sm tracking-wide font-medium",
+      "body": "text-sm sm:text-base leading-relaxed text-slate-300",
+      "label": "text-xs font-mono uppercase tracking-widest text-slate-400"
+    }
+  },
+  "layouts_and_grids": {
+    "landing_page": {
+      "layout": "High-impact narrative layout with Lenis smooth scroll, hero order-flow preview, grid-based feature highlights, interactive footprint interactive canvas widget, pricing cards, and FAQ.",
+      "spacing": "Generous section padding py-20 lg:py-28, gap-8 to gap-12 between content blocks."
+    },
+    "trading_terminal": {
+      "desktop": "4-Region Grid: TopBar (Height 48px), Left Toolbar (Width 48px), Center Footprint/Volume Profile Canvas + Bottom Analytics Tabs, Right Side DOM/OrderBook Panel & Live Tape.",
+      "mobile": "Single Column with Sticky Bottom Navigation Switcher [CHART | DOM | TAPE | SIGNALS | ANALYTICS] ensuring zero squeezed controls."
+    },
+    "admin_dashboard": {
+      "grid": "High Density Grid (grid-cols-1 md:grid-cols-4 gap-4) featuring WebSocket Health, Data Feeds Status, Active Subscriptions, System Settings, and User Management."
+    },
+    "user_dashboard": {
+      "grid": "3-Column Bento Grid featuring My Saved Layouts, Active Alerts, Subscription Tier, API Key Management, and Recent Signals."
+    }
+  },
+  "components_and_structure": {
+    "component_path": "/app/frontend/src/components",
+    "pages": [
+      {
+        "name": "LandingPage",
+        "route": "/",
+        "description": "Hero section 'SEE THE MARKET BEHIND THE CANDLE', live footprint preview canvas, Delta/VWAP/DOM feature grids, Pricing, FAQ, Risk Disclosure, and Login/Register triggers."
+      },
+      {
+        "name": "TradingTerminal",
+        "route": "/terminal",
+        "description": "Professional order-flow suite with Exchange Selector (BINANCE/BYBIT/GATE.IO), Timeframe bar, Footprint Chart Canvas (Bid/Ask volume, Delta, Imbalances, Absorptions, VWAP overlays), Volume Profile, DOM panel, Live Tape, and Bottom Analytics Tabs."
+      },
+      {
+        "name": "AdminDashboard",
+        "route": "/admin",
+        "description": "System health dashboard monitoring WebSocket latency, API rate limits, exchange connection status, revenue metrics, and user management."
+      },
+      {
+        "name": "UserDashboard",
+        "route": "/dashboard",
+        "description": "Trader hub managing favorite markets, custom footprint profiles, signal alerts, subscription plan, and active API keys."
+      },
+      {
+        "name": "AuthPages",
+        "route": "/login & /register",
+        "description": "Dark glassmorphic authentication screens with high-security MFA/API key onboarding."
+      }
+    ]
+  },
+  "canvas_and_rendering": {
+    "footprint_chart": "Rendered using HTML5 Canvas / WebGL context for 60FPS tick-level rendering. Must depict candle outline, stacked imbalance highlights (#FF007A), Point of Control (POC #FFD700), VWAP cyan line, and bid-ask matrix inside each candle body.",
+    "volume_profile": "Adjacent horizontal bar chart showing net volume & delta per price level with High Volume Nodes (HVN) and Low Volume Nodes (LVN)."
+  },
+  "image_urls": {
+    "hero_backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1735469157670-1212e570eadc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxjcnlwdG8lMjB0cmFkaW5nJTIwdGVybWluYWwlMjBkYXJrJTIwYW5hbHl0aWNzJTIwc3RvY2slMjBtYXJrZXQlMjBjaGFydHxlbnwwfHx8fDE3OTExMTcyMjJ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Trading Workspace Hero",
+        "description": "Professional multi-monitor trading desk setup with financial charts"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1735467547583-d9fc4503f238?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxjcnlwdG8lMjB0cmFkaW5nJTIwdGVybWluYWwlMjBkYXJrJTIwYW5hbHl0aWNzJTIwc3RvY2slMjBtYXJrZXQlMjBjaGFydHxlbnwwfHx8fDE3OTExMTcyMjJ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "High Frequency Analytics Desk",
+        "description": "Mechanical keyboard and analytics display showing stock market graphs"
+      }
+    ]
+  },
+  "testing_and_accessibility": {
+    "testing_attributes": "All interactive elements (buttons, inputs, exchange toggles, chart tabs, DOM buttons) MUST include a kebab-case data-testid attribute. E.g., data-testid='exchange-selector-binance', data-testid='order-flow-tab-signals', data-testid='terminal-open-button'.",
+    "accessibility": "High contrast WCAG AA compliant colors for dark theme. Full keyboard shortcuts support for chart navigation (Zoom +/- , Reset view, Switch tab)."
+  },
+  "instructions_to_main_agent": {
+    "1": "Use .js / .jsx React files with Tailwind CSS classes.",
+    "2": "Never use fully transparent backgrounds for headers or overlays. Always use high-contrast glassmorphic backgrounds (rgba(13, 16, 26, 0.85) with backdrop-blur-md).",
+    "3": "Render tick tape and DOM panel with continuous simulated WebSocket micro-animations for real-time market action feel.",
+    "4": "Ensure signal cards indicate confidence levels explicitly: Strong (#00E676), Moderate (#00F0FF), Weak (#FFB800), Neutral (#64748B) without implying financial certainty.",
+    "5": "Implement Sonner toasts for connection status, price alert triggers, and backtest results."
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Avoid generic admin dashboard aesthetics. Emulate high-end professional order flow software like DepthTerm, VolFix, and Bookmap.",
+    "Ensure dark colors look crisp with sharp 1px borders (#1E2638) and subtle dark shadows.",
+    "Do NOT apply universal transitions like transition: all. Use specific property transitions.",
+    "Do NOT center align the app root container text.",
+    "Do NOT use AI assistant emojis (🤖, 🧠, 💡) for icons. Use lucide-react or phosphor icons.",
+    "All interactive and key informational elements MUST include data-testid attributes."
+  ]
+}
