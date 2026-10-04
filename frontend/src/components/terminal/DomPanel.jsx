@@ -16,7 +16,7 @@ export const DomPanel = ({ market, depth, onDepth, compact }) => {
   const spread = bestAsk && bestBid ? bestAsk - bestBid : null;
   const bidTot = bids.reduce((a, x) => a + x[1], 0), askTot = asks.reduce((a, x) => a + x[1], 0);
   const bidPct = bidTot + askTot ? (bidTot / (bidTot + askTot)) * 100 : 50;
-  useEffect(() => { spreadRef.current?.scrollIntoView({ block: "center" }); }, [depth, symbol, exchange]);
+  useEffect(() => { const el = spreadRef.current; const parent = el?.parentElement; if (el && parent) parent.scrollTop = el.offsetTop - parent.clientHeight / 2; }, [depth, symbol, exchange, asks.length]);
   const maxDepth = exchange === "BINANCE" ? 1000 : 50;
 
   const Row = ({ p, q, side, best }) => {
@@ -45,7 +45,7 @@ export const DomPanel = ({ market, depth, onDepth, compact }) => {
         <div className="h-1 bg-bear/50 relative overflow-hidden rounded-sm"><div className="absolute left-0 top-0 h-full bg-bull bar-anim" style={{ width: `${bidPct}%` }} /></div>
       </div>
       <div className="grid grid-cols-[1fr_1fr_1.3fr] px-2 h-6 items-center label shrink-0 border-b border-line"><span>Price</span><span className="text-right">Size</span><span className="pl-2">Liquidity</span></div>
-      <div className="flex-1 min-h-0 overflow-y-auto">
+      <div className="flex-1 min-h-0 overflow-y-auto relative">
         {asks.map(([p, q], i) => <Row key={`a${i}`} p={p} q={q} side="ask" best={i === asks.length - 1} />)}
         <div ref={spreadRef} className="h-7 flex items-center justify-between px-2 bg-elev border-y border-line font-mono text-[11px]" data-testid="dom-spread-row">
           <span className="label">SPREAD</span>
